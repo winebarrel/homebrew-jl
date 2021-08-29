@@ -12,14 +12,7 @@ class Jlsort < Formula
     sha256 'c332dddefd33395753a171b96030bc99f30ac05f5c4f2b07e1a15bac8a0bbfe2'
   end
 
-  head 'https://github.com/winebarrel/jlsort.git'
-
   def install
-    if build.head?
-      system 'cargo', 'build', '--release'
-      bin.install 'target/release/jlsort'
-    else
-      bin.install 'jlsort'
-    end
+    bin.install 'jlsort'
   end
 end
