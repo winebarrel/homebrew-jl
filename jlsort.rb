@@ -14,10 +14,6 @@ class Jlsort < Formula
 
   head 'https://github.com/winebarrel/jlsort.git'
 
-  head do
-    depends_on 'rust' => :build
-  end
-
   def install
     if build.head?
       system 'cargo', 'build', '--release'
